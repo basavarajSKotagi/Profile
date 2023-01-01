@@ -74,7 +74,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SliderImageComponent implements OnInit {
   slides = [
-    { imgUrl: 'assets/images/slideshow/phot.jpg', active: true },
+    { imgUrl: 'assets/images/slideshow/photo_2.jpg', active: true },
     {
       imgUrl: 'assets/images/slideshow/IMG_20220309_133129.png',
       active: false,
