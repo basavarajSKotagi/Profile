@@ -11,7 +11,6 @@ import { ProfileComponent } from './Modules/profile/profile.component';
 import { ProfileExperienceComponent } from './Components/profile-experience/profile-experience.component';
 import { GroupListTemplateComponent } from './Components/shared/group-list-template/group-list-template.component';
 import { ProfileEducationComponent } from './Components/profile-experience/profile-education/profile-education/profile-education.component';
-import { ProfilePersonalInfoComponent } from './Components/profile-experience/profile-personal-details/profile-personal-info/profile-personal-info.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +22,6 @@ import { ProfilePersonalInfoComponent } from './Components/profile-experience/pr
     ProfileExperienceComponent,
     GroupListTemplateComponent,
     ProfileEducationComponent,
-    ProfilePersonalInfoComponent,
   ],
   providers: [],
   bootstrap: [AppComponent],

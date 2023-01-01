@@ -8,7 +8,7 @@ import { ProfileDataService } from 'src/app/Core/Services/profile-data/profile-d
   selector: 'app-profile-summary',
   template: ` <ng-container *ngFor="let list of pointsList">
     <app-group-list-template
-      [HeaderFont]="'c text-uppercase'"
+      [HeaderFont]="'fs-6 text-uppercase'"
       [header]="list.header"
       [pointsList]="list.items"
     >
