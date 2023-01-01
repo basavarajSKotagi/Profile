@@ -8,7 +8,7 @@ import { UnSubscribeTemplate } from 'src/app/Core/shared/unSubscribeTemplate';
   selector: 'app-profile',
   template: `
     <div
-      class="col-md-4 pt-md-3 bg-color section-left"
+      class="col-md-4 pt-md-3 pt-sm-2 bg-color section-left"
       style="min-height: 100vh;"
     >
       <div class="d-flex flex-row">
@@ -30,7 +30,10 @@ import { UnSubscribeTemplate } from 'src/app/Core/shared/unSubscribeTemplate';
       </div>
       <app-profile-summary></app-profile-summary>
     </div>
-    <div class="col-md-8 pt-md-3 section-right" style="min-height: 100vh;">
+    <div
+      class="col-md-8 pt-md-3  pt-sm-2 section-right"
+      style="min-height: 100vh;"
+    >
       <app-profile-experience> </app-profile-experience>
       <app-profile-education></app-profile-education>
     </div>

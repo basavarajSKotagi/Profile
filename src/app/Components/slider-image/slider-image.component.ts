@@ -11,7 +11,7 @@ import { Component, OnInit } from '@angular/core';
         class="img-fluid slide"
         [ngClass]="{ active: slide.active }"
       />
-      <div class="slider-content">
+      <div class="d-none slider-content d-md-flex">
         {{ 'Click to ' + (slideShowOn ? 'Stop' : 'Start') + ' Slide Show' }}
       </div>
     </div>
@@ -74,7 +74,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SliderImageComponent implements OnInit {
   slides = [
-    { imgUrl: 'assets/images/slideshow/phot.JPG', active: true },
+    { imgUrl: 'assets/images/slideshow/phot.jpg', active: true },
     {
       imgUrl: 'assets/images/slideshow/IMG_20220309_133129.png',
       active: false,
