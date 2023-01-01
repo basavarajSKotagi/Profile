@@ -1,0 +1,30 @@
+/* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family:Arial, Helvetica, sans-serif;
+  font-size: 14px !important;
+}
+
+.cl-profile .fw-bold,
+.cl-profile strong {
+  font-weight: 600 !important;
+}
+
+.cl-profile hr {
+  border-top: 2px dotted !important;
+  color: #0e0ec2 !important;
+}
+
+.cl-profile .section-left hr {
+  border-top: 2px dotted !important;
+  color: #0c0b0c !important;
+}
+
+.cl-profile ul li {
+  list-style-type: disclosure-closed;
+}
