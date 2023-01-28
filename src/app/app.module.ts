@@ -11,6 +11,7 @@ import { ProfileComponent } from './Modules/profile/profile.component';
 import { ProfileExperienceComponent } from './Components/profile-experience/profile-experience.component';
 import { GroupListTemplateComponent } from './Components/shared/group-list-template/group-list-template.component';
 import { ProfileEducationComponent } from './Components/profile-experience/profile-education/profile-education/profile-education.component';
+import { ProfileCardThemeComponent } from './Modules/profile-card-theme/profile-card-theme.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { ProfileEducationComponent } from './Components/profile-experience/profi
     ProfileExperienceComponent,
     GroupListTemplateComponent,
     ProfileEducationComponent,
+    ProfileCardThemeComponent,
   ],
   providers: [],
   bootstrap: [AppComponent],
