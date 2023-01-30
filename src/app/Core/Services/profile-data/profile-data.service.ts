@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Point, PointsType } from 'src/app/Core/Interface/Point';
 import { of } from 'rxjs';
+import { Constants } from '../../Constants/constants';
 
 @Injectable({
   providedIn: 'root',
@@ -20,7 +21,11 @@ export class ProfileDataService {
         text: 'Well versed in <strong>Design Patterns, SOLID Principles</strong>. Awareness of cross-browser compatibility issues and client-side performance considerations',
       },
     ];
-    this.pointsList.push({ header: 'Summary', items: summaryPoints });
+    this.pointsList.push({
+      id: Constants.Summary.id,
+      header: Constants.Summary.displayName,
+      items: summaryPoints,
+    });
 
     var SkillPoints: Point[] = [
       {
@@ -37,7 +42,11 @@ export class ProfileDataService {
       },
     ];
 
-    this.pointsList.push({ header: 'Skills', items: SkillPoints });
+    this.pointsList.push({
+      id: Constants.Skills.id,
+      header: Constants.Skills.displayName,
+      items: SkillPoints,
+    });
 
     return of(this.pointsList);
   }

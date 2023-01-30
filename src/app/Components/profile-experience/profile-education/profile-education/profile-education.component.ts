@@ -12,6 +12,7 @@ import { takeUntil } from 'rxjs';
         [HeaderFont]="'fs-6 text-uppercase'"
         [header]="list.header"
         [pointsList]="list.items"
+        [dividerRequired]="false"
       >
       </app-group-list-template>
     </ng-container>

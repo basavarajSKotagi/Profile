@@ -11,6 +11,7 @@ import { ProfileDataService } from 'src/app/Core/Services/profile-data/profile-d
       [HeaderFont]="'fs-6 text-uppercase'"
       [header]="list.header"
       [pointsList]="list.items"
+      [dividerRequired]="false"
     >
     </app-group-list-template>
   </ng-container>`,

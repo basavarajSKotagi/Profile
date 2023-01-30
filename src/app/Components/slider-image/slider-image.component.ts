@@ -12,7 +12,7 @@ import { Component, OnInit } from '@angular/core';
         [ngClass]="{ active: slide.active }"
       />
       <div class="d-none slider-content d-md-flex">
-        {{ 'Click to ' + (slideShowOn ? 'Stop' : 'Start') + ' Slide Show' }}
+        {{ slideShowOn ? 'Stop' : 'Start' }}
       </div>
     </div>
   `,
@@ -22,8 +22,8 @@ import { Component, OnInit } from '@angular/core';
         position: relative;
         overflow: hidden;
         cursor: pointer;
-        height: 10vw;
-        width: 10vw;
+        height: 8vw;
+        width: 8vw;
         min-height: 50px;
         min-width: 50px;
         margin: auto;
@@ -55,9 +55,8 @@ import { Component, OnInit } from '@angular/core';
         background-color: grey;
         color: white;
         display: flex;
-        align-items: center;
+        align-items: end;
         justify-content: center;
-        text-align: center;
         visibility: hidden;
         opacity: 0;
         transition: visibility 0s, opacity 0.2s;

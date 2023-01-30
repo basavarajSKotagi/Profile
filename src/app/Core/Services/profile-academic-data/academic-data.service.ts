@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Point, PointsType } from 'src/app/Core/Interface/Point';
 import { of } from 'rxjs';
+import { Constants } from '../../Constants/constants';
 @Injectable({
   providedIn: 'root',
 })
@@ -19,7 +20,11 @@ export class AcademicDataService {
         text: '10th from VBES High School, Savanur, Karnataka Secondary Education Examination Board in 2006; secured 90.72%',
       },
     ];
-    this.pointsList.push({ header: 'ACADEMIC DETAILS', items: summaryPoints });
+    this.pointsList.push({
+      id: Constants.Academic.id,
+      header: Constants.Academic.displayName,
+      items: summaryPoints,
+    });
 
     return of(this.pointsList);
   }

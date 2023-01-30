@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Constants } from 'src/app/Core/Constants/constants';
 
 @Component({
   selector: 'app-profile-experience',
@@ -14,8 +15,8 @@ import { Component } from '@angular/core';
   styles: [``],
 })
 export class ProfileExperienceComponent {
-  experience: string = 'WORK Experience';
+  experience: string = Constants.Experience.displayName;
   companyName: string =
     '<span class="fw-light">Since Oct’12: </span><span class="ps-1"> Kantar Anlytics Practice (Formerly: Analytics Quotient Services India Private Ltd.), Bengaluru as Lead Engineer</span>';
-  projectDetails: string = 'Project Details:';
+  projectDetails: string = Constants.Projects.displayName;
 }

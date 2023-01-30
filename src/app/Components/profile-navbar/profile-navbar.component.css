@@ -1,0 +1,12 @@
+.nav-item {
+  border-radius: 5px;
+  border: 1px solid transparent;
+}
+
+.nav-item:hover {
+  border-color: #0a58be;
+}
+
+.nav-item:focus {
+  border-color: #0a58be;
+}

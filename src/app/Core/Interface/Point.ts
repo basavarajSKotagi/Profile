@@ -2,13 +2,14 @@ export interface Point {
   text: string;
 }
 export interface PointsType {
+  id: string;
   header: string;
   items: Point[];
 }
 
 export interface ProjectType {
   Project: string;
-  Period:string;
+  Period: string;
   Client: string;
   Role: string;
   Tech: string;

@@ -12,6 +12,7 @@ import { ProfileExperienceComponent } from './Components/profile-experience/prof
 import { GroupListTemplateComponent } from './Components/shared/group-list-template/group-list-template.component';
 import { ProfileEducationComponent } from './Components/profile-experience/profile-education/profile-education/profile-education.component';
 import { ProfileCardThemeComponent } from './Modules/profile-card-theme/profile-card-theme.component';
+import { ProfileNavbarComponent } from './Components/profile-navbar/profile-navbar.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { ProfileCardThemeComponent } from './Modules/profile-card-theme/profile-
     GroupListTemplateComponent,
     ProfileEducationComponent,
     ProfileCardThemeComponent,
+    ProfileNavbarComponent,
   ],
   providers: [],
   bootstrap: [AppComponent],
