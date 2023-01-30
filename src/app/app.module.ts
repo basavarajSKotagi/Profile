@@ -13,6 +13,8 @@ import { GroupListTemplateComponent } from './Components/shared/group-list-templ
 import { ProfileEducationComponent } from './Components/profile-experience/profile-education/profile-education/profile-education.component';
 import { ProfileCardThemeComponent } from './Modules/profile-card-theme/profile-card-theme.component';
 import { ProfileNavbarComponent } from './Components/profile-navbar/profile-navbar.component';
+import { SocialMediaHandlesComponent } from './Components/social-media-handles/social-media-handles.component';
+import { ContactDetailsComponent } from './Components/contact-details/contact-details.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +28,8 @@ import { ProfileNavbarComponent } from './Components/profile-navbar/profile-navb
     ProfileEducationComponent,
     ProfileCardThemeComponent,
     ProfileNavbarComponent,
+    SocialMediaHandlesComponent,
+    ContactDetailsComponent,
   ],
   providers: [],
   bootstrap: [AppComponent],

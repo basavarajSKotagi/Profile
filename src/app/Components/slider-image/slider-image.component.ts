@@ -11,7 +11,7 @@ import { Component, OnInit } from '@angular/core';
         class="img-fluid slide"
         [ngClass]="{ active: slide.active }"
       />
-      <div class="d-none slider-content d-md-flex">
+      <div class="d-none slider-content">
         {{ slideShowOn ? 'Stop' : 'Start' }}
       </div>
     </div>

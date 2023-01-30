@@ -91,7 +91,7 @@ body {
 @media (max-width: 575.98px) {
   .header-section {
     width: 100%;
-    height: auto !important;
+    height: 10vh !important;
   }
   .header-section .navbar-nav {
     display: flex;
@@ -107,5 +107,6 @@ body {
   }
   .main-section {
     width: 100%;
+    height: calc(100% - 10vh - 1rem) !important;
   }
 }
