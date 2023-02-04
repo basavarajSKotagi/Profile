@@ -7,8 +7,16 @@ import { Constants } from '../../Constants/constants';
 })
 export class ProfileCardThemeService {
   constructor() {}
-  activeSection = new BehaviorSubject<string>(Constants.Summary.id);
+  defalutSelection: any = Constants.Summary;
+
+  activeSection = new BehaviorSubject<any>({});
+
   setSectionData(section: any) {
-    this.activeSection.next(section.id);
+    this.activeSection.next(section);
+  }
+
+  initializeSubject(): void {
+    this.defalutSelection.All = false;
+    this.setSectionData(this.defalutSelection);
   }
 }

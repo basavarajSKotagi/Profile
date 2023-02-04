@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+
 import { Constants } from 'src/app/Core/Constants/constants';
 import { ProfileCardThemeService } from 'src/app/Core/Services/profile-card-theme/profile-card-theme.service';
 
@@ -25,56 +26,104 @@ import { ProfileCardThemeService } from 'src/app/Core/Services/profile-card-them
     </header>
     <main class="d-block main-section h-100">
       <section
-        class="widget-section shadow m-3 p-3 bg-body rounded flex-column"
+        class="widget-section flex-column"
         [id]="summary"
-        [ngClass]="activeSection == summary ? '' : 'd-none'"
+        [ngClass]="
+          activeSection.All ? '' : activeSection.id == summary ? '' : 'd-none'
+        "
       >
-        <div class="position-relative">
-          <h5>Basavaraj Kotagi:</h5>
-          <div class="fs-8"><i>Lead Engineer</i></div>
-          <hr />
-          <div
-            class="d-sm-block d-md-none position-absolute top-0 end-0"
-            style="width:15vw; height:15vw;"
-          >
-            <img
-              style="border-radius: 50%;width:15vw; height:15vw;"
-              src="assets/images/slideshow/photo_2.jpg"
-              alt=""
-            />
+        <div
+          class="widget-shadow m-3 p-3 bg-body rounded w-100"
+          [ngClass]="
+            activeSection.All
+              ? activeSection.id == summary
+                ? 'highlight-section'
+                : ''
+              : ''
+          "
+        >
+          <div class="position-relative">
+            <h5>Basavaraj Kotagi:</h5>
+            <div class="fs-8"><i>Lead Engineer</i></div>
+            <div class="li-item"></div>
+            <hr />
+            <div
+              class="d-sm-block d-md-none position-absolute top-0 end-0"
+              style="width:15vw; height:15vw;"
+            >
+              <img
+                style="border-radius: 50%;width:15vw; height:15vw;"
+                src="assets/images/slideshow/photo_2.jpg"
+                alt=""
+              />
+            </div>
           </div>
+          <app-profile-summary></app-profile-summary>
         </div>
-        <app-profile-summary></app-profile-summary>
       </section>
       <section
-        class="widget-section shadow  m-3 p-3 bg-body rounded"
+        class="widget-section  flex-column"
         [id]="Experience"
-        [ngClass]="activeSection == Experience ? '' : 'd-none'"
+        [ngClass]="
+          activeSection.All
+            ? ''
+            : activeSection.id == Experience
+            ? ''
+            : 'd-none'
+        "
       >
-        <app-profile-experience> </app-profile-experience>
+        <div
+          class="widget-shadow m-3 p-3 bg-body rounded w-100"
+          [ngClass]="
+            activeSection.All
+              ? activeSection.id == Experience
+                ? 'highlight-section'
+                : ''
+              : ''
+          "
+        >
+          <app-profile-experience> </app-profile-experience>
+        </div>
       </section>
       <section
-        class="widget-section shadow  m-3 p-3 bg-body rounded"
+        class="widget-section  flex-column"
         [id]="Academic"
-        [ngClass]="activeSection == Academic ? '' : 'd-none'"
+        [ngClass]="
+          activeSection.All ? '' : activeSection.id == Academic ? '' : 'd-none'
+        "
       >
-        <app-profile-education></app-profile-education>
+        <div
+          class="widget-shadow m-3 p-3 bg-body rounded w-100"
+          [ngClass]="
+            activeSection.All
+              ? activeSection.id == Academic
+                ? 'highlight-section'
+                : ''
+              : ''
+          "
+        >
+          <app-profile-education></app-profile-education>
+        </div>
       </section>
     </main>
   `,
   styles: [``],
 })
-export class ProfileCardThemeComponent {
+export class ProfileCardThemeComponent implements OnInit {
+  ngOnInit(): void {
+    this.profileCardThemeService.activeSection.subscribe((result) => {
+      console.log(result);
+      this.activeSection = result;
+    });
+  }
   summary: string;
   Experience: string;
   Academic: String;
-  activeSection: string = '';
+  activeSection: any = [];
   constructor(private profileCardThemeService: ProfileCardThemeService) {
     this.summary = Constants.Summary.id;
     this.Experience = Constants.Experience.id;
+    this.profileCardThemeService.initializeSubject();
     this.Academic = Constants.Academic.id;
-    this.profileCardThemeService.activeSection.subscribe((result) => {
-      this.activeSection = result;
-    });
   }
 }

@@ -1,4 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
+* {
+  scroll-behavior: smooth;
+}
 
 html,
 body {
@@ -6,9 +9,11 @@ body {
 }
 body {
   margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Arial, sans-serif;
   font-size: 14px !important;
-  letter-spacing: 0.04rem;
+  line-height: 1.58;
+  font-weight: 500;
+  letter-spacing: 0.03rem;
 }
 
 .cursor-pointer {
@@ -34,13 +39,26 @@ body {
   list-style-type: disclosure-closed;
 }
 
-html,
-body {
-  height: 100%;
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+  scrollbar-width: auto;
+  scrollbar-color: #92abdd #ffffff;
 }
-body {
-  margin: 0;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #ffffff;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #92abdd;
+  border-radius: 10px;
+  border: 3px solid #ffffff;
 }
 
 .header-section {
@@ -77,6 +95,15 @@ body {
   animation-name: slider;
   animation-duration: 1s;
   animation-iteration-count: 1;
+}
+
+.highlight-section {
+  border: 0.1rem solid gray;
+  box-shadow: 0 0.1rem 1.3rem rgb(94 102 223) !important;
+}
+
+.widget-shadow {
+  box-shadow: 0 0.4rem 1rem rgba(128, 128, 155, 0.6) !important;
 }
 
 @keyframes slider {

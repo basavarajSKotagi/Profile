@@ -9,7 +9,8 @@ import { ProfileCardThemeService } from 'src/app/Core/Services/profile-card-them
 })
 export class ProfileNavbarComponent implements OnInit {
   ConstantList: any = [];
-
+  showAllScetions: boolean = false;
+  currectSection: any = [];
   constructor(private profileCardThemeService: ProfileCardThemeService) {}
 
   ngOnInit() {
@@ -23,6 +24,17 @@ export class ProfileNavbarComponent implements OnInit {
       if (value.id === section.id) value.active = true;
       else value.active = false;
     });
-    this.profileCardThemeService.setSectionData(section);
+
+    let data = section;
+    data.All = this.showAllScetions;
+    this.currectSection = data;
+    this.profileCardThemeService.setSectionData(data);
+  }
+
+  displayAllSection() {
+    this.showAllScetions = !this.showAllScetions;
+    let data = this.ConstantList[0];
+    data.All = this.showAllScetions;
+    this.displaySection(data);
   }
 }

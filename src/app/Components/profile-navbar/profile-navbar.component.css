@@ -10,3 +10,13 @@
 .nav-item:focus {
   border-color: #0a58be;
 }
+
+.toggle-active {
+  background-color: rgb(5, 177, 120);
+  border: none !important;
+}
+
+.toggle-nonactive {
+  background-color: grey;
+  border: none !important;
+}
