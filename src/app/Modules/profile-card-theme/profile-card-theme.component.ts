@@ -112,7 +112,6 @@ import { ProfileCardThemeService } from 'src/app/Core/Services/profile-card-them
 export class ProfileCardThemeComponent implements OnInit {
   ngOnInit(): void {
     this.profileCardThemeService.activeSection.subscribe((result) => {
-      console.log(result);
       this.activeSection = result;
     });
   }
